@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Workshop de Unity - Introdução</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="favicon.ico">  
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS -->
+    <script defer src="assets/fontawesome/js/all.js"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/lightbox/dist/ekko-lightbox.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">  
+      
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    
+</head> 
+
+<body class="body-orange">
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="index.html">
+                            <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                            <span class="text-highlight">FutureLabs</span><span class="text-bold"></span>
+                        </a>
+                    </h1>
+                    
+                </div><!--//branding-->
+            </div><!--//container-->
+        </header><!--//header-->
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+					<i class="icon fab fa-unity"></i>
+                    <h1 class="doc-title">Workshop de Unity</h1>
+                    <div class="meta"><i class="far fa-clock"></i> 09/03/2021</div>
+                </div><!--//doc-header-->
+                <div class="doc-body row">
+                    <div class="doc-content col-md-9 col-12 order-1">
+                        <div class="content-inner">
+                            <section id="pre-req" class="doc-section">
+                                <h2 class="section-title">Pré-Requisitos</h2>
+                                <div class="section-block">
+									<ol class="list">
+										<li> Instalar <a href="https://store.unity.com/download?ref=personal" class="btn btn-orange" target="_blank"><i class="fas fa-download"></i>Unity Hub</a>
+										</li>
+										<li> No Unity Hub, criar uma conta pessoal (grátis)
+											<div class="screenshot-holder col-md-6 col-sm-12 col-sm-12">
+												<a href="assets/images/install-login.png" data-title="install-login" data-toggle="lightbox"><img class="img-fluid" src="assets/images/install-login.png" alt="screenshot" /></a>
+												<a class="mask" href="assets/images/install-login.png" data-title="install-login" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+											</div> 
+										</li>
+										<li> Em <b>Preferences>License Management</b> ativar uma nova licença
+											<div class="screenshot-holder col-md-6 col-sm-12 col-sm-12">
+												<a href="assets/images/install-license.png" data-title="install-license" data-toggle="lightbox"><img class="img-fluid" src="assets/images/install-license.png" alt="screenshot" /></a>
+												<a class="mask" href="assets/images/install-license.png" data-title="install-license" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+											</div> 
+										</li>
+										<li> Instalar a versão 2020.2.x do Unity
+											<div class="screenshot-holder col-md-6 col-sm-12 col-sm-12">
+												<a href="assets/images/install-version.png" data-title="install-version" data-toggle="lightbox"><img class="img-fluid" src="assets/images/install-version.png" alt="screenshot" /></a>
+												<a class="mask" href="assets/images/install-version.png" data-title="install-version" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+											</div> 
+										</li>
+										<li> (Opcional) Todos os módulos podem ser desativados, incluindo o Visual Studio, uma vez que não serão necessários para esta workshop
+											<div class="screenshot-holder col-md-6 col-sm-12 col-sm-12">
+												<a href="assets/images/install-components.png" data-title="install-components" data-toggle="lightbox"><img class="img-fluid" src="assets/images/install-components.png" alt="screenshot" /></a>
+												<a class="mask" href="assets/images/install-components.png" data-title="install-components" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+											</div> 
+										</li>
+
+										<li> Em <b>Projects</b> clicar em <b>New</b> para começar um novo projeto. Na lista de templates escolher o <b>3D</b>.
+											<div class="screenshot-holder col-md-6 col-sm-12 col-sm-12">
+												<a href="assets/images/new.png" data-title="new" data-toggle="lightbox"><img class="img-fluid" src="assets/images/new.png" alt="screenshot" /></a>
+												<a class="mask" href="assets/images/new.png" data-title="new" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+											</div> 
+										</li>
+                                    </ol>
+                                </div>
+                            </section><!--//doc-section-->
+							
+							<section id="interface" class="doc-section">
+                                <h2 class="section-title">Interface</h2>
+                                <div class="section-block">
+									<p>De uma forma geral, a interface do Unity está dividida em 4 áreas:</p>
+									<div class="screenshot-holder">
+										<a href="assets/images/interface.png" data-title="Interface" data-toggle="lightbox"><img class="img-fluid" src="assets/images/interface.png" alt="screenshot" /></a>
+										<a class="mask" href="assets/images/interface.png" data-title="Interface" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+									</div> 
+									<ol class="list">
+										<li><b>Scene View</b> - visão do mundo</li>
+										<li><b>Hierarchical View</b> - lista de objectos atualmente no mundo</li>
+										<li><b>Inpector View</b> - propriedades do objecto selecionado</li>
+										<li><b>Project View</b> - ficheiros do projeto (assets)</li>
+									</ol>
+                                </div>
+                            </section><!--//doc-section-->
+							
+							<section id="tools" class="doc-section">
+                                <h2 class="section-title">Navegação e Manipulação</h2>
+								<div id="tools-focus"  class="section-block">
+                                    <h3 class="block-title">Focus</h3>
+                                    <p><b>Duplo clique</b> na <b>Hierarchical View</b> - Câmara posiciona-se de forma a focar o objecto.</p>
+                                    <div class="embed-responsive embed-responsive-1920by928">
+										<video controls muted poster="assets/videos/navigation/focus.mp4.jpg">
+											<source src="assets/videos/navigation/focus.mp4" type="video/mp4">
+										</video>
+									</div>
+                                </div><!--//section-block-->
+								<div id="tools-zoom"  class="section-block">
+                                    <h3 class="block-title">Zoom</h3>
+                                    <p><b>Roda do rato</b> na <b>Scene View</b> - Câmara aproxima-se ou afasta-se.</p>
+                                    <div class="embed-responsive embed-responsive-1920by928">
+										<video controls muted poster="assets/videos/navigation/zoom.mp4.jpg">
+											<source src="assets/videos/navigation/zoom.mp4" type="video/mp4">
+										</video>
+									</div>
+                                </div><!--//section-block-->
+								<div id="tools-move"  class="section-block">
+                                    <h3 class="block-title">Move</h3>
+                                    <p><b>Botão do meio do rato</b> na <b>Scene View</b> - Câmara move-se para os lados.</p>
+                                    <div class="embed-responsive embed-responsive-1920by928">
+										<video controls muted poster="assets/videos/navigation/pan.mp4.jpg">
+											<source src="assets/videos/navigation/pan.mp4" type="video/mp4">
+										</video>
+									</div>
+                                </div><!--//section-block-->
+								<div id="tools-orbit"  class="section-block">
+                                    <h3 class="block-title">Orbit</h3>
+                                    <p><b>Alt + Botão esquerdo do rato</b> na <b>Scene View</b> - Câmara roda em torno de um ponto previamente focado.</p>
+                                    <div class="embed-responsive embed-responsive-1920by928">
+										<video controls muted poster="assets/videos/navigation/orbit.mp4.jpg">
+											<source src="assets/videos/navigation/orbit.mp4" type="video/mp4">
+										</video>
+									</div>
+                                </div><!--//section-block-->
+								<div id="tools-fps"  class="section-block">
+                                    <h3 class="block-title">First Person</h3>
+                                    <p><b>Botão direito do rato + WASD</b> na <b>Scene View</b> - Câmara move-se como se fosse um FPS, o rato controla a orientação e as teclas o movimento.</p>
+                                    <div class="embed-responsive embed-responsive-1920by928">
+										<video controls muted poster="assets/videos/navigation/rotate.mp4.jpg">
+											<source src="assets/videos/navigation/rotate.mp4" type="video/mp4">
+										</video>
+									</div>
+                                </div><!--//section-block-->
+								
+								<div id="tools-manipulation"  class="section-block">
+                                    <h3 class="block-title">Manipulação</h3>
+                                    <p>Existem 3 formas básicas de manipular um objecto no mundo: translação, rotação e escala. Cada uma tem uma ferramenta específica para o efeito, com determinados eixos que podem ser ajustados com o rato.</p>
+									<p>É possível alterar estes vetores diretamente na componente <b>Transform</b> do objecto, inserindo um novo valor ou ajustando o existente com o rato. Para limpar os valores existe a opção de <b>Reset</b>.</p>
+                                    <div class="embed-responsive embed-responsive-1920by928">
+										<video controls muted poster="assets/videos/navigation/tools.mp4.jpg">
+											<source src="assets/videos/navigation/tools.mp4" type="video/mp4">
+										</video>
+									</div>
+                                </div><!--//section-block-->
+
+                            </section><!--//doc-section-->
+							
+							<section id="base" class="doc-section">
+                                <h2 class="section-title">Base</h2>
+                                <div class="section-block">
+									<h3 style="text-align:right;"><strong><i class="fas fa-hourglass-half"></i> 06:00</strong></h3>
+
+									<div class="section-block">
+										<ol class="list">
+											<li>Botão direito do rato na <b>Hierarchical View</b> e escolher <b>3D Object>Cube</b>. Colocar o cubo na posição <b>(0, 0, 0)</b> e escala <b>(10, 0.1, 10)</b>.</li>
+											<div class="embed-responsive embed-responsive-1920by928">
+												<video controls muted poster="assets/videos/base/create.mp4.jpg">
+													<source src="assets/videos/base/create.mp4" type="video/mp4">
+												</video>
+											</div>
+										</ol>
+										
+									</div><!--//section-block-->
+									
+									<div class="section-block">
+										<ol start="2" class="list">
+											<li>Descarregar o pacote de assets desta workshop: <a href="assets/unitypackages/workshop.unitypackage" class="btn btn-orange" target="_blank"><i class="fas fa-download"></i>workshop.unitypackage</a></li>
+											<li>Abrir o pacote e importar todos os ficheiros.</li>
+											<div class="embed-responsive embed-responsive-1920by928">
+												<video controls muted poster="assets/videos/base/import.mp4.jpg">
+													<source src="assets/videos/base/import.mp4" type="video/mp4">
+												</video>
+											</div>
+										</ol>
+									</div><!--//section-block-->
+									
+									<div class="section-block">
+										<ol start="4" class="list">
+											<li>No <b>Project View</b> abrir a pasta <b>WorkshopAssets>Car</b> e arrastar o carro para dentro da <b>Scene View</b>, de forma a ficar em cima do chão.</li>
+											<div class="embed-responsive embed-responsive-1920by928">
+												<video controls muted poster="assets/videos/base/car.mp4.jpg">
+													<source src="assets/videos/base/car.mp4" type="video/mp4">
+												</video>
+											</div>	
+										</ol>
+									</div><!--//section-block-->
+									
+									<div class="section-block">
+										<ol start="5" class="list">
+											<li>Carregar no botão <b>Play</b> para iniciar o jogo. As teclas para controlar o carro são WASD, ou as teclas direcionais.</li>
+											<u>ATENÇÃO:</u> Alterações aos objetos da cena feitas durante o jogo são descartadas quando se termina.
+											<div class="screenshot-holder">
+												<a href="assets/images/play.png" data-title="Play" data-toggle="lightbox"><img class="img-fluid" src="assets/images/play.png" alt="screenshot" /></a>
+												<a class="mask" href="assets/images/play.png" data-title="Play" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+											</div> 
+										</ol>
+									</div><!--//section-block-->
+									
+                                </div>
+                            </section><!--//doc-section-->
+							
+							<section id="materials" class="doc-section">
+                                <h2 class="section-title">Texturas e Materiais</h2>
+                                <div class="section-block">
+									<h3 style="text-align:right;"><strong><i class="fas fa-hourglass-half"></i> 08:00</strong></h3>
+
+									<div class="section-block">
+										<ol class="list">
+											<li>Botão direito do rato no <b>Project View</b> e escolher <b>Create>Material</b>.</li>
+											<li>Na propriedade <b>Albedo</b> escolher a cor pretendida para o carro.</li>
+											<li>Arrastar o <b>Material</b> para cima do carro para o atribuir.</li>
+											<div class="embed-responsive embed-responsive-1920by928">
+												<video controls muted poster="assets/videos/material/car.mp4.jpg">
+													<source src="assets/videos/material/car.mp4" type="video/mp4">
+												</video>
+											</div>
+										</ol>
+									</div><!--//section-block-->
+									
+									<div class="section-block">
+										<ol class="list" start="4">
+											<li>Usando o editor de imagem preferido (Paint por exemplo), criar uma imagem com resolução de <b>1024x1024px</b>, e desenhar a pista.</li>
+											<p>Esta imagem deve ser guardada na pasta <b>Assets</b> do projeto. Para a abrir rapidamente esta pasta pode-se usar o botão direito do rato no <b>Project View</b> e escolher <b>Show in Explorer</b>.</p>
+										</ol>
+									</div><!--//section-block-->
+									
+									<div class="section-block">
+										<ol class="list" start="5">
+											<li>Botão direito do rato no <b>Project View</b> e escolher <b>Create>Material</b>.</li>
+											<li>Arrastar o <b>Material</b> para cima do chão para o atribuir.</li>
+											<li>Arrastar a imagem criada para o espaço em branco à esquerda da propriedade <b>Albedo</b>.</li>
+											<div class="embed-responsive embed-responsive-1920by928">
+												<video controls muted poster="assets/videos/material/ground.mp4.jpg">
+													<source src="assets/videos/material/ground.mp4" type="video/mp4">
+												</video>
+											</div>
+										</ol>
+									</div><!--//section-block-->
+									
+									<div class="section-block">
+										<ol class="list" start="9">
+											<li>Escalar o chão para que o tamanho da pista fique grande o suficiente para o carro mover-se. Será algo à volta de <b>(100, 0.1, 100)</b>.</li>
+											<p><u>ATENÇÃO:</u> A escala do carro não deve ser alterada.</p>
+										</ol>
+									</div><!--//section-block-->
+									
+									<div class="section-block">
+										<h3 class="question" style="text-align: center;"><i class="fas fa-play"></i> <span style="font-weight:bold">Play!</span></h3>
+									</div><!--//section-block-->
+									
+                                </div>
+                            </section><!--//doc-section-->
+							
+							<section id="camera" class="doc-section">
+                                <h2 class="section-title">Câmara</h2>
+                                <div class="section-block">
+									<h3 style="text-align:right;"><strong><i class="fas fa-hourglass-half"></i> 10:00</strong></h3>
+									
+									<div class="section-block">
+										<ol class="list">
+											<li>Na <b>Hierarchical View</b> arrastar a câmara <b>Main Camera</b> para cima do carro.</li>
+											<p><u>ATENÇÃO:</u> A câmara deverá ser o ultimo filho dentro do carro, senão o Unity dará um erro de prefab.</p>
+											<li>Posicionar a câmara de forma a permitir guiar o carro. Usar a preview que aparece no canto direito para visualizar como vai ficar. Uma posição que funciona bem é <b>(0, 2.5, -5)</b> e rotação <b>(18, 0, 0)</b>.</li>
+											<div class="embed-responsive embed-responsive-1920by928">
+												<video controls muted poster="assets/videos/camera/camera.mp4.jpg">
+													<source src="assets/videos/camera/camera.mp4" type="video/mp4">
+												</video>
+											</div>
+										</ol>
+									</div><!--//section-block-->
+									
+									<div class="section-block">
+										<ol class="list" start="3">
+											<li>Ajustar a posição do carro, para iniciar dentro da pista.</li>
+										</ol>
+									</div><!--//section-block-->
+									
+									<div class="section-block">
+										<ol class="list" start="4">
+											<li>No <b>Project View</b> abrir a pasta <b>WorkshopAssets>Track</b> e adicionar saltos e obstáculos para tornar a pista mais interessante.</li>
+											<div class="embed-responsive embed-responsive-1920by928">
+												<video controls muted poster="assets/videos/camera/jump.mp4.jpg">
+													<source src="assets/videos/camera/jump.mp4" type="video/mp4">
+												</video>
+											</div>
+										</ol>
+									</div><!--//section-block-->
+									
+									<div class="section-block">
+										<h3 class="question" style="text-align: center;"><i class="fas fa-play"></i> <span style="font-weight:bold">Play!</span></h3>
+									</div><!--//section-block-->
+									
+                                </div>
+                            </section><!--//doc-section-->
+							
+							<section id="animation" class="doc-section">
+                                <h2 class="section-title">Animação</h2>
+                                <div class="section-block">
+									<h3 style="text-align:right;"><strong><i class="fas fa-hourglass-half"></i> 07:00</strong></h3>
+									
+									<div class="section-block">
+										<ol class="list">
+											<li>Botão direito do rato na <b>Hierarchical View</b> e escolher <b>3D Object>Create Empty</b>. Colocar na posição <b>(0, 0, 0)</b>.</b></li>
+											<li>Botão direito do rato no objecto criado anteriormente e escolher <b>3D Object>Cube</b>. Colocar na posição <b>(0, 1, 0)</b>.</b></li>
+											<li>No <b>Project View</b> abrir a pasta <b>WorkshopAssets>Explosion</b> e arrastar a <b>Explosion</b> para cima do objecto criado no ponto 1.  Colocar na posição <b>(0, 1, 0)</b>.</li>
+											<div class="embed-responsive embed-responsive-1920by928">
+												<video controls muted poster="assets/videos/animation/shiny.mp4.jpg">
+													<source src="assets/videos/animation/shiny.mp4" type="video/mp4">
+												</video>
+											</div>
+										</ol>
+									</div><!--//section-block-->
+									
+									<div class="section-block">
+										<ol class="list" start="4">
+											<li>Selecionar o cubo criado no ponto 2 e abrir a tab <b>Animation</b>. Caso esta tab não esteja visível, ir a <b>Window>Animation>Animation (Ctrl+6)</b>.</li>
+											<li>Clicar em <b>Create</b> e escolher o nome e localização para o ficheiro de animação que será criado.</li>
+											<li>Clicar no botão redondo vermelho, que inicia o modo de gravação.</li>
+											<li>Botão direito do rato na propriedade <b>Rotation</b> do cubo e escolher <b>Add Key</b>.</li>
+											<li>Na linha do tempo, ir para a posição 1 segundo.</li>
+											<li>Botão direito do rato na propriedade <b>Rotation</b> do cubo e escolher <b>Add Key</b>. Mudar a rotação para <b>(0, 360, 0)</b>.</li>
+											<li>Clicar novamente no botão redondo vermelho para terminar o modo de gravação.</li>
+											<div class="embed-responsive embed-responsive-1920by928">
+												<video controls muted poster="assets/videos/animation/animation.mp4.jpg">
+													<source src="assets/videos/animation/animation.mp4" type="video/mp4">
+												</video>
+											</div>
+										</ol>
+									</div><!--//section-block-->
+									
+									<div class="section-block">
+										<h3 class="question" style="text-align: center;"><i class="fas fa-play"></i> <span style="font-weight:bold">Play!</span></h3>
+									</div><!--//section-block-->
+									
+                                </div>
+                            </section><!--//doc-section-->
+							
+							<section id="collision" class="doc-section">
+                                <h2 class="section-title">Colisões e Scripts</h2>
+                                <div class="section-block">
+									<h3 style="text-align:right;"><strong><i class="fas fa-hourglass-half"></i> 05:00</strong></h3>
+									
+									<div class="section-block">
+										<ol class="list">
+											<li>Selecionar o cubo criado na secção anterior e, nas propriedades dele, ativar a propriedade <b>Is Trigger</b> que se encontra na componente <b>Box Collider</b>.</li>
+											<li>Selecionar a explosão adicionada na secção anterior e, nas propriedades dela, desativar na primeira checkbox, ao lado esquerdo do nome. Nota que o nome do objecto na <b>Hierarchical View</b> muda para uma cor mais clara.</li>
+											<div class="embed-responsive embed-responsive-1920by928">
+												<video controls muted poster="assets/videos/collision/trigger.mp4.jpg">
+													<source src="assets/videos/collision/trigger.mp4" type="video/mp4">
+												</video>
+											</div>
+										</ol>
+									</div><!--//section-block-->
+									
+									<div class="section-block">
+										<ol class="list" start="3">
+											<li>Botão direito do rato no <b>Project View</b> e escolher <b>Create>C# Script</b>.</li>
+											<div class="embed-responsive embed-responsive-1920by928">
+												<video controls muted poster="assets/videos/collision/create.mp4.jpg">
+													<source src="assets/videos/collision/create.mp4" type="video/mp4">
+												</video>
+											</div>
+										</ol>
+									</div><!--//section-block-->
+
+									<div class="section-block">
+										<ol class="list" start="4">
+											<li>Duplo clique no script criado para abrir o editor predefinido (pode ser o Notepad), e colocar o seguinte codigo dentro da classe, a seguir ao método <b>Update</b>.</li>
+											<pre><code class="language-javascript">
+public GameObject explosionPrefab;
+
+void OnTriggerEnter(Collider other){
+	explosionPrefab.SetActive(true); 
+	gameObject.SetActive(false);
+}
+											</code></pre>
+										</ol>
+									</div><!--//section-block-->
+
+									<div class="section-block">
+										<ol class="list" start="5">
+											<li>No <b>Project View</b>, arrastar o script criado para cima do cubo.</li>
+											<p><u>ATENÇÃO:</u> Se o script tiver algum erro, não será possível associar. Na consola é apresentada uma mensagem a vermelho com a causa do erro.</p>
+											<li>Selecionar o cubo e, nas propriedades dele, procurar a componente que corresponde ao script adicionado. Arrastar a explosão para a propriedade <b>Explosion Prefab</b>.</li>
+											<div class="embed-responsive embed-responsive-1920by928">
+												<video controls muted poster="assets/videos/collision/associate.mp4.jpg">
+													<source src="assets/videos/collision/associate.mp4" type="video/mp4">
+												</video>
+											</div>
+										</ol>
+									</div><!--//section-block-->
+
+									<div class="section-block">
+										<h3 class="question" style="text-align: center;"><i class="fas fa-play"></i> <span style="font-weight:bold">Play!</span></h3>
+									</div><!--//section-block-->
+									
+                                </div>
+                            </section><!--//doc-section-->
+							
+							<section id="prefabs" class="doc-section">
+                                <h2 class="section-title">Prefabs</h2>
+                                <div class="section-block">
+									<h3 style="text-align:right;"><strong><i class="fas fa-hourglass-half"></i> 05:00</strong></h3>
+									
+									<div class="section-block">
+										<ol class="list">
+											<li>Na <b>Hierarchical View</b> arrastar o objecto pai, que contém o cubo e explosão, para o <b>Project View</b>. Nota que a cor do nome desse objecto (e filhos) passa de preto a azul.</li>
+											<li>No <b>Project View</b> arrastar o prefab acado de criar para a pista. Repetindo a gosto.</li>
+											<div class="embed-responsive embed-responsive-1920by928">
+												<video controls muted poster="assets/videos/prefab/prefab.mp4.jpg">
+													<source src="assets/videos/prefab/prefab.mp4" type="video/mp4">
+												</video>
+											</div>
+										</ol>
+									</div><!--//section-block-->
+									
+									<div class="section-block">
+										<h3 class="question" style="text-align: center;"><i class="fas fa-play"></i> <span style="font-weight:bold">Play!</span></h3>
+									</div><!--//section-block-->
+									
+                                </div>
+                            </section><!--//doc-section-->
+							
+							<section id="ui" class="doc-section">
+                                <h2 class="section-title">UI e Compilação</h2>
+                                <div class="section-block">
+									<h3 style="text-align:right;"><strong><i class="fas fa-hourglass-half"></i> 05:00</strong></h3>
+									
+									<div class="section-block">
+										<ol class="list">
+											<li>Botão direito do rato na <b>Hierarchical View</b> e escolher <b>UI>Text</b>. Escrever na propriedade <b>Text</b> de componente <b>Text</b> o nome do participante.</li>
+											<div class="embed-responsive embed-responsive-1920by928">
+												<video controls muted poster="assets/videos/ui/ui.mp4.jpg">
+													<source src="assets/videos/ui/ui.mp4" type="video/mp4">
+												</video>
+											</div>
+										</ol>
+									</div><!--//section-block-->
+									
+									<div class="section-block">
+										<ol class="list" start="2">
+											<li>No menu ir a <b>File>Build Settings...</b>.</li>
+											<li>Clicar em <b>Add Open Scenes</b>.</li>
+											<li>Clicar em <b>Build</b> e escolher a pasta onde vai ser gerado o executável.</li>
+											<div class="embed-responsive embed-responsive-1920by928">
+												<video controls muted poster="assets/videos/ui/build.mp4.jpg">
+													<source src="assets/videos/ui/build.mp4" type="video/mp4">
+												</video>
+											</div>
+										</ol>
+									</div><!--//section-block-->
+									
+									<div class="section-block">
+										<h3 class="question" style="text-align: center;"><i class="fas fa-share-alt"></i> <span style="font-weight:bold">Share!</span></h3>
+									</div><!--//section-block-->
+									
+									</p>
+                                </div>
+                            </section><!--//doc-section-->
+							
+                            
+                        </div><!--//content-inner-->
+                    </div><!--//doc-content-->
+                    <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
+                        <div id="doc-nav" class="doc-nav">
+	                        
+	                            <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+	                                <a class="nav-link scrollto" href="#pre-req">Pré-Requisitos</a>
+	                                <a class="nav-link scrollto" href="#interface">Interface</a>
+	                                <a class="nav-link scrollto" href="#tools">Navegação e Manipulação</a>
+										<nav class="doc-sub-menu nav flex-column">
+											<a class="nav-link scrollto" href="#tools-focus">Focus</a>
+											<a class="nav-link scrollto" href="#tools-zoom">Zoom</a>
+											<a class="nav-link scrollto" href="#tools-move">Move</a>
+											<a class="nav-link scrollto" href="#tools-orbit">Orbit</a>
+											<a class="nav-link scrollto" href="#tools-fps">First Person</a>
+											<a class="nav-link scrollto" href="#tools-manipulation">Manipulação</a>
+										</nav><!--//nav-->
+									<a class="nav-link scrollto" href="#base">Base</a>
+									<a class="nav-link scrollto" href="#materials">Texturas e Materiais</a>
+									<a class="nav-link scrollto" href="#camera">Câmara</a>
+									<a class="nav-link scrollto" href="#animation">Animação</a>
+									<a class="nav-link scrollto" href="#collision">Colisões e Scripts</a>
+									<a class="nav-link scrollto" href="#prefabs">Prefabs</a>
+									<a class="nav-link scrollto" href="#ui">UI e Compilação</a>
+	                            </nav><!--//doc-menu-->
+	                        
+                        </div>
+                    </div><!--//doc-sidebar-->
+                </div><!--//doc-body-->              
+            </div><!--//container-->
+        </div><!--//doc-wrapper-->
+        
+        
+    </div><!--//page-wrapper-->
+    
+    <footer id="footer" class="footer text-center">
+        <div class="container">
+            <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+            <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="https://themes.3rdwavemedia.com/" target="_blank">Xiaoying Riley</a> for developers</small>
+            
+        </div><!--//container-->
+    </footer><!--//footer-->
+    
+     
+    <!-- Main Javascript -->          
+    <script type="text/javascript" src="assets/plugins/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>    
+    <script type="text/javascript" src="assets/plugins/lightbox/dist/ekko-lightbox.min.js"></script>      
+    <script type="text/javascript" src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>                                                             
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    
+</body>
+</html> 
+
